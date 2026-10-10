@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c0f15">
+<title>Free Fire</title>
+
+<style>
+:root {
+    --bg: #0c0f15;
+    --surface: #161a22;
+    --surface-hover: #1c212b;
+    --accent: #3f5bff;
+    --accent-hover: #5370ff;
+    --text: #f2f4f8;
+    --muted: #7f8798;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.stack {
+    width: 100%;
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 68px;
+    padding: 14px 14px 14px 18px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background-color .2s ease, transform .15s ease;
+}
+
+.tile:active {
+    transform: scale(.985);
+}
+
+.tile:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 3px;
+}
+
+.primary {
+    background: var(--accent);
+}
+
+.primary:hover {
+    background: var(--accent-hover);
+}
+
+.secondary {
+    background: var(--surface);
+}
+
+.secondary:hover {
+    background: var(--surface-hover);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    line-height: 1.15;
+}
+
+.sub {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.primary .sub {
+    color: rgba(255, 255, 255, .7);
+}
+
+.secondary .sub {
+    color: var(--muted);
+}
+
+.go {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s ease;
+}
+
+.primary .go {
+    background: rgba(255, 255, 255, .18);
+}
+
+.secondary .go {
+    background: rgba(255, 255, 255, .07);
+}
+
+.tile:hover .go {
+    transform: translateX(2px);
+}
+
+.go svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tile, .go {
+        transition: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="stack">
+
+    <a class="tile primary"
+       href="https://ckrpro.onrender.com/"
+       target="_blank"
+       rel="noopener noreferrer">
+        <span class="text">
+            <span class="title">Free Fire Bot</span>
+            <span class="sub">Open the bot</span>
+        </span>
+        <span class="go" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+    </a>
+
+    <a class="tile secondary"
+       href="https://free-fire-glory-bot-ckr-and-bbc-web.vercel.app/"
+       target="_blank"
+       rel="noopener noreferrer">
+        <span class="text">
+            <span class="title">Free Fire Glory</span>
+            <span class="sub">Open Glory</span>
+        </span>
+        <span class="go" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+    </a>
+
+</main>
+
+</body>
+</html>
